@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% load static %} {% block body %}
+<h2 class="align-center text-center">Daftar Karyawan</h2>
+<table class="table table-striped table" id="myTable" style="width:100%">
+  <thead>
+    <tr>
+      <th>Kode Karyawan</th>
+      <th>Nama</th>
+      <th>Usia</th>
+      <th>Gaji</th>
+      <th>Tempat Lahir</th>
+      <th>Jabatan</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for Karyawan in karyawans %}
+    <tr>
+      <td>{{ Karyawan.kodekrywn }}</td>
+      <td>{{ Karyawan.nama }}</td>
+      <td>{{ Karyawan.usia }}</td>
+      <td>{{ Karyawan.gaji }}</td>
+      <td>{{ Karyawan.tempat_lahir }}</td>
+      <td>{{ Karyawan.jabatan_id_id }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock body %}

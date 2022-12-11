@@ -1,0 +1,27 @@
+{% extends 'base.html' %} {% load static %} {% block body %}
+<h2 class="align-center text-center">Daftar Barang</h2>
+<table class="table table-striped table" id="myTable" style="width:100%">
+  <thead>
+    <tr>
+      <th>Kode Barang</th>
+      <th>Nama</th>
+      <th>Stok</th>
+      <th>Harga</th>
+      <th>Link Gambar</th>
+      <th>Jenis</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for Barang in barangs %}
+    <tr>
+      <td>{{ Barang.kodebrg }}</td>
+      <td>{{ Barang.nama }}</td>
+      <td>{{ Barang.stok }}</td>
+      <td>{{ Barang.harga }}</td>
+      <td>{{ Barang.link_gbr }}</td>
+      <td>{{ Barang.jenis_id_id }}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endblock body %}
